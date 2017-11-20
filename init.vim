@@ -9,6 +9,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-commentary'
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-compiler'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-tags'
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
     if has('nvim')
@@ -35,6 +44,8 @@ filetype indent on "load filetype specific indent files
 syntax on
 set incsearch "searches as characters are entered
 set hlsearch "highlights search matches
+
+let g:airline#extensions#ale#enabled = 1
 
 " move vertically by visual line, not technical line
 nnoremap j gj
