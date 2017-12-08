@@ -17,6 +17,10 @@ Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'tpope/vim-commentary'
+Plug 'posva/vim-vue'
+Plug 'Valloric/MatchTagAlways'
+Plug 'ctrlpvim/ctrlp.vim'
 
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
