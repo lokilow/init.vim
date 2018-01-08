@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'tpope/vim-commentary'
+Plug 'lambdalisue/gina.vim'
 Plug 'posva/vim-vue'
 Plug 'Valloric/MatchTagAlways'
 Plug 'ctrlpvim/ctrlp.vim'
