@@ -21,7 +21,11 @@ Plug 'tpope/vim-commentary'
 Plug 'lambdalisue/gina.vim'
 Plug 'posva/vim-vue'
 Plug 'Valloric/MatchTagAlways'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
+
 
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
@@ -42,6 +46,7 @@ set background=dark
 set tabstop=4
 set expandtab
 set shiftwidth=4
+set autochdir
 set number "show line numbers
 set cursorline  "underline active line
 set ruler "shows row/column number in bottom
@@ -51,6 +56,7 @@ set incsearch "searches as characters are entered
 set hlsearch "highlights search matches
 
 let g:airline#extensions#ale#enabled = 1
+let g:deoplete#enable_at_startup = 1
 
 " move vertically by visual line, not technical line
 nnoremap j gj
