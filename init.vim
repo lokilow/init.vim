@@ -25,6 +25,9 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'jpalardy/vim-slime'
+Plug 'kassio/neoterm'
 
 
 function! BuildComposer(info)
@@ -50,6 +53,7 @@ set autochdir
 set number "show line numbers
 set cursorline  "underline active line
 set ruler "shows row/column number in bottom
+set textwidth=88
 filetype indent on "load filetype specific indent files
 syntax on
 set incsearch "searches as characters are entered
