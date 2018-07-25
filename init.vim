@@ -28,6 +28,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'kassio/neoterm'
+Plug 'wlangstroth/vim-racket'
 
 
 function! BuildComposer(info)
