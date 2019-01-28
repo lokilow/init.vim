@@ -32,6 +32,8 @@ Plug 'wlangstroth/vim-racket'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'thinca/vim-ref'
+Plug 'wilsaj/chuck.vim'
+
 
 
 function! BuildComposer(info)
