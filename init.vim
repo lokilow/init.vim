@@ -31,8 +31,11 @@ Plug 'kassio/neoterm'
 Plug 'wlangstroth/vim-racket'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+Plug 'mhinz/vim-mix-format'
 Plug 'thinca/vim-ref'
 Plug 'wilsaj/chuck.vim'
+Plug 'ElmCast/elm-vim'
+
 
 
 
@@ -55,11 +58,10 @@ set background=dark
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set autochdir
 set number "show line numbers
 set cursorline  "underline active line
 set ruler "shows row/column number in bottom
-set textwidth=88
+set textwidth=89
 filetype indent on "load filetype specific indent files
 syntax on
 set incsearch "searches as characters are entered
@@ -68,7 +70,12 @@ set hlsearch "highlights search matches
 let g:airline#extensions#ale#enabled = 1
 let g:deoplete#enable_at_startup = 1
 
+" format elixir code on save
+let g:mix_format_on_save = 1
+
 " move vertically by visual line, not technical line
 nnoremap j gj
 nnoremap k gk
 inoremap jk <esc>
+
+noremap <C-P> :Files <CR>
