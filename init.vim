@@ -11,7 +11,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Utilities
 "
 Plug 'Soares/base16.nvim'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'kassio/neoterm'
 Plug '/usr/local/opt/fzf'
@@ -25,6 +24,7 @@ Plug 'vim-airline/vim-airline' "status line
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 
+Plug '~/.local/share/nvim/manual_plugins/vulkan1.0.vim'
 " 
 " Languages
 "
@@ -45,6 +45,8 @@ Plug 'vim-erlang/vim-erlang-tags'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'mhinz/vim-mix-format'
+" lfe
+Plug 'lfe/vim-lfe'
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 Plug 'eagletmt/ghcmod-vim'
@@ -95,12 +97,18 @@ let g:airline#extensions#ale#enabled = 1
 let g:deoplete#enable_at_startup = 1
 
 " format elixir code on save
-let g:mix_format_on_save = 1
+let g:mix_format_on_save = 0
 
 " langugae server settings
 let g:LanguageClient_serverCommands = {
     \ 'reason': ['/usr/local/opt/reason-language-server/bin/reason-language-server.exe'],
     \ }
+
+if has("autocmd")
+    au BufReadPost *.rkt,*.rktl set filetype=racket
+    au filetype racket set lisp
+    au filetype racket set autoindent
+endif
 
 "
 " Mappings
