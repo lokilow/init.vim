@@ -1,5 +1,5 @@
 "
-" @lokilow's neovim config
+" @config nvim
 "
 
 " 
@@ -24,7 +24,6 @@ Plug 'vim-airline/vim-airline' "status line
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 
-Plug '~/.local/share/nvim/manual_plugins/vulkan1.0.vim'
 " 
 " Languages
 "
@@ -39,7 +38,6 @@ Plug 'reasonml-editor/vim-reason-plus'
 " erlang
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'vim-erlang/vim-erlang-compiler'
-Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'vim-erlang/vim-erlang-tags'
 " elixir
 Plug 'elixir-editors/vim-elixir'
@@ -57,6 +55,12 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'wlangstroth/vim-racket'
 Plug 'wilsaj/chuck.vim'
+Plug 'mrk21/yaml-vim'
+Plug '~/.local/share/nvim/manual_plugins/vulkan1.0.vim'
+
+" ops
+Plug 'hashivim/vim-terraform'
+
 
 "
 " Plugs with build funtions
@@ -73,11 +77,13 @@ endfunction
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildMarkdownComposer') }
 
 call plug#end()
+" call deoplete#custom#option('num_processes', 1)
 
 
 "
 " Config
 "
+set clipboard=unnamed " Use macOS clipboard
 set termguicolors
 colorscheme embers
 set background=dark
@@ -89,6 +95,7 @@ set cursorline  "underline active line
 set ruler "shows row/column number in bottom
 set textwidth=89
 filetype indent on "load filetype specific indent files
+filetype plugin on
 syntax on
 set incsearch "searches as characters are entered
 set hlsearch "highlights search matches
@@ -97,7 +104,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:deoplete#enable_at_startup = 1
 
 " format elixir code on save
-let g:mix_format_on_save = 0
+let g:mix_format_on_save = 1
 
 " langugae server settings
 let g:LanguageClient_serverCommands = {
