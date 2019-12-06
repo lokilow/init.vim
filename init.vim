@@ -13,7 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'Soares/base16.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'kassio/neoterm'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Valloric/MatchTagAlways'
@@ -93,7 +93,7 @@ set shiftwidth=4
 set number "show line numbers
 set cursorline  "underline active line
 set ruler "shows row/column number in bottom
-set textwidth=89
+set textwidth=105
 filetype indent on "load filetype specific indent files
 filetype plugin on
 syntax on
@@ -102,6 +102,10 @@ set hlsearch "highlights search matches
 
 let g:airline#extensions#ale#enabled = 1
 let g:deoplete#enable_at_startup = 1
+
+"erlang tags
+set runtimepath^=/home/low/.local/share/nvim/plugged/vim-erlang-tags/
+let g:erlang_tags_ignore = ['rel','_build','ebin','builds']
 
 " format elixir code on save
 let g:mix_format_on_save = 1
