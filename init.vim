@@ -16,6 +16,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'sophacles/vim-processing'
 Plug 'katusk/vim-qkdb-syntax'
 Plug 'jubnzv/IEC.vim'
+Plug 'vim-test/vim-test'
 
 function! BuildMarkdownComposer(info)
   if a:info.status != 'unchanged' || a:info.force
