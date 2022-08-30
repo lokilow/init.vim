@@ -46,7 +46,7 @@ let g:mix_format_silent_errors = 1
 
 " set termguicolors
 set background=dark
-set tabstop=4
+set tabstop=2
 set expandtab
 set shiftwidth=4
 set number "show line numbers
