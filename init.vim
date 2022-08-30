@@ -17,6 +17,9 @@ Plug 'sophacles/vim-processing'
 Plug 'katusk/vim-qkdb-syntax'
 Plug 'jubnzv/IEC.vim'
 Plug 'vim-test/vim-test'
+Plug 'dhruvasagar/vim-dotoo'
+Plug 'vim-latex/vim-latex'
+
 
 function! BuildMarkdownComposer(info)
   if a:info.status != 'unchanged' || a:info.force
