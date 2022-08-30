@@ -80,6 +80,9 @@ augroup vimrc
   autocmd!
   autocmd! BufWritePre /tmp/* setlocal noundofile
 augroup END
+autocmd BufWritePre *.ex %s/\s\+$//e
+autocmd BufWritePre *.heex %s/\s\+$//e
+autocmd BufWritePre *.exs %s/\s\+$//e
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
