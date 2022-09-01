@@ -1,3 +1,4 @@
+set runtimepath^=~/sof/ols/
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -19,7 +20,9 @@ Plug 'jubnzv/IEC.vim'
 Plug 'vim-test/vim-test'
 Plug 'dhruvasagar/vim-dotoo'
 Plug 'vim-latex/vim-latex'
-
+Plug 'kevinoid/vim-jsonc'
+Plug 'AtsushiSakai/julia.vim'
+" Plug 'neovim/nvim-lsp'
 
 function! BuildMarkdownComposer(info)
   if a:info.status != 'unchanged' || a:info.force
@@ -186,6 +189,10 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+augroup filetypedetect
+  au! BufRead,BufNewFile *.ijs,*.ijt,*.ijp,*.ijx        setfiletype j
+augroup END
+
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -255,4 +262,3 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-
