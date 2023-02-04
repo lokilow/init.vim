@@ -22,6 +22,8 @@ Plug 'dhruvasagar/vim-dotoo'
 Plug 'vim-latex/vim-latex'
 Plug 'kevinoid/vim-jsonc'
 Plug 'AtsushiSakai/julia.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 " Plug 'neovim/nvim-lsp'
 
 function! BuildMarkdownComposer(info)
