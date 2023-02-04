@@ -54,7 +54,7 @@ let g:tex_flavor='latex'
 set background=dark
 set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set number "show line numbers
 set cursorline  "underline active line
 set ruler "shows row/column number in bottom
