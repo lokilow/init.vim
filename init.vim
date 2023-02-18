@@ -31,6 +31,7 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'AtsushiSakai/julia.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 " Plug 'neovim/nvim-lsp'
 
 function! BuildMarkdownComposer(info)
@@ -57,7 +58,8 @@ let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
 let g:tex_flavor='latex'
 
-" set termguicolors
+set termguicolors
+colorscheme nordic
 set background=dark
 set tabstop=2
 set expandtab
